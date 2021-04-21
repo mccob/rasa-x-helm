@@ -1,12 +1,12 @@
 # helmfile for Rasa X deployment
 repositories:
-- name: bitnami
-  url: https://charts.bitnami.com/bitnami
+- name: rasa-x
+  url: https://rasahq.github.io/rasa-x-helm
 
 releases:
   - name: rasa-x
     namespace: default
-    chart: ../../charts/rasa-x
+    chart: rasa-x/rasa-x
     values:
       - rasax:
           disableTelemetry: true
